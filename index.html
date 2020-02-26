@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+const  IsAPalindrom = expandPalindrom  = number  => {
+	  number = BigInt(number);
+
+if(CheckPalindrom(number)){
+	return true
+}
+number += BigInt(String(number).split('').reverse().join(''));  
+ 
+ try {
+ 	return expandPalindrom(number);
+ } catch(e) {
+ 	return false;
+ 	
+ }
+}
+
+let InputNumber = prompt('Введите ваше число'); // for example 312
+alert(IsAPalindrom(InputNumber))
+
+	function CheckPalindrom(number){
+		return String(number) === String(number).split('').reverse().join('');
+}
+
+</script>
+</body>
+</html>
